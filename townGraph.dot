@@ -1,0 +1,37 @@
+graph townGraph {
+    home -- park1 [weight=1]
+    home -- neighbors_house [weight=1]
+    home -- corner_store [weight=2]
+
+    park1 -- library [weight=3]
+    park1 -- park2 [weight=2]
+    park1 -- general_store [weight=7]
+    park1 -- grandmas_house [weight=5]
+
+    neighbors_house -- friends_house [weight=1]
+    friends_house -- grandmas_house [weight=3]
+
+    corner_store -- visitor_center [weight=10]
+    corner_store -- library [weight=3]
+
+    library -- police_station [weight=4]
+    library -- grocery [weight=3]
+    library -- park2 [weight=2]
+
+    park2 -- grocery [weight=2]
+    park2 -- general_store [weight=2]
+
+    general_store -- grocery [weight=1]
+    general_store -- country_club [weight=5]
+
+    visitor_center -- inner_city [weight=30]
+    visitor_center -- next_state [weight=120]
+    visitor_center -- country_club [weight=8]
+
+    inner_city -- next_state [weight=120]
+
+    police_station -- grocery [weight=2]
+
+    grocery -- visitor_center [weight=4]
+
+}
